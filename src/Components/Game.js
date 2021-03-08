@@ -1,12 +1,15 @@
 import React, {useState} from 'react'
 import { calculateWinner } from '../helper'
 import Board from './Board'
-import {usePlayer1, usePlayer2 } from './PlayerContext'
+import {usePlayer1, usePlayer2, useGameCount } from './PlayerContext'
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 
+
+
 let Player1Count = 0
 let Player2Count = 0
+let count = 1
 
 const styles = {
     Active: {
@@ -18,6 +21,10 @@ const styles = {
     hide:{
         display: 'none'
     },
+    startBtn:{
+        opacity: "0",
+        background: 'Black',
+    }
 }
 
 function Game() {
@@ -26,6 +33,7 @@ function Game() {
     const winner = calculateWinner(board)
     const Player1 = usePlayer1()
     const Player2 = usePlayer2()
+    const GameCount = useGameCount()
     
 
     if(winner === "X"){
@@ -47,7 +55,15 @@ function Game() {
     }
 
     const rendorMoves = () => (
-        <button className="NextGame" onClick={()=> setBoard(Array(9).fill(null))}><span>Start Game</span></button>
+        <button id="start" className="NextGame" onClick={()=> {
+            setBoard(Array(9).fill(null))
+            if(count === GameCount){
+                let startButton = document.getElementById("start")
+                startButton.hidden  = true
+            }else if(count<GameCount-1){
+                count++
+            }
+        }}><span>Start Game</span></button>
     )
 
     return (
@@ -61,10 +77,10 @@ function Game() {
                         <Board squares={board} onClick={handleClick} />
                     </div>
                     <div className=" sidebar col-lg-5 col-md-5 col-sm-6">
-                        <h3>5 Games Tournament</h3>
+                        <h3>{GameCount} Games Tournament</h3>
                         <h2 className="text-center" style={winner? null : styles.hide}>Congratulation!</h2>
-                        <p className="text-center" style={winner? null : styles.hide}>{winner==="X" ? Player1  : Player2 }, you won Game 3</p>
-                        <p className="text-center">Playing Game 3</p>
+                        <p className="text-center" style={winner? null : styles.hide}>{winner==="X" ? Player1  : Player2 }, you won Game {count}</p>
+                        <p className="text-center">Playing Game {count}</p>
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2">

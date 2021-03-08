@@ -34,18 +34,18 @@ export function useUpdateGameCount(){
 export function PlayerProvider({ children }){
     const [Player1, setPlayer1] = useState("")
     const [Player2, setPlayer2] = useState("")
-    const [GameCount, setGameCount] = useState(0)
+    const [GameCount, setGameCount] = useState(1)
 
     return(
         <Player1Context.Provider value={Player1}>
             <Player2Context.Provider value={Player2}>
                 <Player1UpdateContext.Provider value={setPlayer1}>
                     <Player2UpdateContext.Provider value={setPlayer2}>
-                        <GameCountContext value={GameCount}>
-                            <GameCountUpdateContext value={setGameCount}>
-                            {children}
-                            </GameCountUpdateContext>
-                        </GameCountContext>
+                        <GameCountContext.Provider value={GameCount}>
+                            <GameCountUpdateContext.Provider value={setGameCount}>
+                                {children}
+                            </GameCountUpdateContext.Provider>
+                        </GameCountContext.Provider>
                     </Player2UpdateContext.Provider>
                 </Player1UpdateContext.Provider>
             </Player2Context.Provider>
