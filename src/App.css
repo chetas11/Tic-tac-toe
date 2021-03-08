@@ -1,38 +1,180 @@
-.App {
+.top-container{
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 10px #00000029;
+  border: 1px solid #F7F7F7;
+  border-radius: 30px;
+  opacity: 1;
+  width: auto;
+  height: 560px;
+  position: relative;
+  margin-top: 110px;
+  padding: 15px;
+}
+
+.input{
+  height: 30px;
+  width: 180px;
+}
+
+.tab{
+  border: 1px solid #70707026;
+  border-radius: 15px;
+  opacity: 1;
+  padding: 10px;
+}
+
+.P1{
+  margin-top: 3%;
+  background: #DCF6E4 0% 0% no-repeat padding-box;
+  height:80px
+}
+
+.P2{
+  background: #F6EFD5 0% 0% no-repeat padding-box;
+  height:80px
+}
+
+.Games, .Turn{
+  background: #EFF3FF 0% 0% no-repeat padding-box;
+  height:80px
+}
+
+.NextGame{
+  background: #4B7BFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #70707026;
+  border-radius: 20px;
+  opacity: 1;
+  width: 100%;
+  height: 50px;
+}
+
+.sidebar{
+  background: #F5F5F5 0% 0% no-repeat padding-box;
+  border: 1px solid #F7F7F7;
+  border-radius: 30px;
+  opacity: 1;
+}
+
+h3{
   text-align: center;
+  font: normal normal medium 36px/55px Poppins;
+  letter-spacing: 0px;
+  color: #424242;
+  opacity: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p{
+  margin: 0;
+  text-align: left;
+  font: normal normal normal 18px/27px Poppins;
+  letter-spacing: 0px;
+  color: #424242;
+  opacity: 0.56;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Turn{
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.startgame{
+  background: #4B7BFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #70707026;
+  border-radius: 20px;
+  opacity: 1;
+  width: 633px;
+  height: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+body{
+  background: var(--unnamed-color-ced2dc) 0% 0% no-repeat padding-box;
+  background: #CED2DC 0% 0% no-repeat padding-box;
+  opacity: 1;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start{
+  background: #FF7243 0% 0% no-repeat padding-box;
+  box-shadow: 10px 10px 50px #FF724373;
+  border-radius: 20px;
+  opacity: 1;
+  width: 102px;
+  height: 102px;
+  color: #424242;
+}
+
+.end{
+  background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border: 1px solid #4B7BFF26;
+  border-radius: 20px;
+  opacity: 1;
+  width: 100%;
+  height: 50px;
+  color: #CC0000;
+}
+
+.fa-play-circle{
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  padding: 10%;
+}
+
+.Banner{
+  opacity: 1;
+  height: 300px; 
+  top: -130px;
+  left: 193px;
+  width: 459px;
+  height: 442px;
+  position: absolute;
+}
+
+span{
+  color: var(--unnamed-color-ffffff);
+  text-align: left;
+  font: normal normal medium 24px/35px Poppins;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.custom{
+  background: #4BABFF 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  opacity: 1;
+    width: 170px;
+  height: 70px;
+}
+
+h1{
+  font-family: 'Lobster', cursive;
+}
+
+
+.online{
+  background: #4B4BFF 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  opacity: 1;
+  width: 170px;
+  height: 70px;
+}
+
+.twop{
+  background: #4B7BFF 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  opacity: 1;
+    width: 170px;
+  height: 70px;
+}
+
+.training{
+  background: #6E4BFF 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  opacity: 1;
+    width: 170px;
+  height: 70px;
 }
