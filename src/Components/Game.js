@@ -9,7 +9,8 @@ import Avatar from '@material-ui/core/Avatar';
 
 let Player1Count = 0
 let Player2Count = 0
-let count = 1
+let count = 0
+let flag = false
 
 const styles = {
     Active: {
@@ -35,6 +36,7 @@ function Game() {
     const Player2 = usePlayer2()
     const GameCount = useGameCount()
     
+    
 
     if(winner === "X"){
         Player1Count++
@@ -56,15 +58,29 @@ function Game() {
 
     const rendorMoves = () => (
         <button id="start" className="NextGame" onClick={()=> {
+            flag = true;
             setBoard(Array(9).fill(null))
-            if(count === GameCount){
-                let startButton = document.getElementById("start")
+            let startButton = document.getElementById("start")
+            if(count+1 >= GameCount){
+                count++
                 startButton.hidden  = true
-            }else if(count<GameCount-1){
+            }else{
                 count++
             }
         }}><span>Start Game</span></button>
     )
+
+    const EndGame = () => {
+        let FinalWinner = document.getElementById("final")
+        let Draw = document.getElementById("draw")
+        if(Player1Count > Player2Count){
+            FinalWinner.innerText = `${Player1}, you have won the Tournament`
+        }else if(Player1Count < Player2Count){
+            FinalWinner.innerText = `${Player2}, you have won the Tournament`
+        }else{
+           Draw.classList.remove("hide")  
+        }
+    }
 
     return (
         <>
@@ -74,13 +90,14 @@ function Game() {
             <div className="col-lg-8 col-md-8 col-sm-6">
                 <div className="row top-container">
                     <div className="col-lg-7 col-md-7 col-sm-6">
-                        <Board squares={board} onClick={handleClick} />
+                        { flag ? <Board id="Board" squares={board} onClick={handleClick} /> : null}
                     </div>
                     <div className=" sidebar col-lg-5 col-md-5 col-sm-6">
-                        <h3>{GameCount} Games Tournament</h3>
+                        <h3>{GameCount} Game Tournament</h3>
                         <h2 className="text-center" style={winner? null : styles.hide}>Congratulation!</h2>
-                        <p className="text-center" style={winner? null : styles.hide}>{winner==="X" ? Player1  : Player2 }, you won Game {count}</p>
-                        <p className="text-center">Playing Game {count}</p>
+                        <p id="final" className="text-center" style={winner? null : styles.hide}>{winner==="X" ? Player1  : Player2 }, you won Game {count}</p>
+                        <h1 id="draw" className="text-center hide">Its a Draw !!!</h1>
+                        <p className="text-center" style={winner? styles.hide : null }>Playing Game {count}</p>
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2">
@@ -130,7 +147,7 @@ function Game() {
                     <hr />
                         
                         {rendorMoves()}
-                        <button className="end mt-3">End Tournament</button>
+                        <button onClick={EndGame} className="end mt-3">End Tournament</button>
                     </div>
                 </div> 
             </div>
