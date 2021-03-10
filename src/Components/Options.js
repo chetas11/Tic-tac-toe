@@ -30,7 +30,7 @@ function Options() {
             <div className="col-lg-4 col-md-4 col-sm-6"></div>
             <div className="col-lg-4 col-md-4 col-sm-6">
                 <div className="row top-container">
-                    <div className="P1 tab">
+                    <div className="P1 tab mb-3 pb-1">
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2">
                                 <Avatar></Avatar> 
@@ -45,7 +45,7 @@ function Options() {
                             </div>
                         </div>
                     </div>
-                    <div className="P2 tab">
+                    <div className="P2 tab mb-3 pb-1">
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2">
                                 <Avatar></Avatar> 
@@ -60,10 +60,10 @@ function Options() {
                             </div>
                         </div>
                     </div>
-                    <div className="Games tab"> 
+                    <div className="Games tab mb-3 pb-1"> 
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2">
-                                <Avatar></Avatar> 
+                                <Avatar><i class="fas fa-trophy"></i></Avatar> 
                             </div>
                             <div className="col-lg-10 col-md-10 col-sm-4">
                                 <div className="col">
@@ -75,10 +75,10 @@ function Options() {
                             </div>
                         </div>
                     </div>
-                    <div className="Turn tab">
+                    <div className="Turn tab mb-3 pb-1">
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2">
-                                <Avatar></Avatar> 
+                                <Avatar><i class="fas fa-running"></i></Avatar> 
                             </div>
                             <div className="col-lg-10 col-md-10 col-sm-4">
                                 <div className="col">

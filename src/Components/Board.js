@@ -3,11 +3,11 @@ import Square from './Square'
 
 
 const style = {
-    border: '4px solid darkblue',
+    border: '4px solid #6e7c7c',
     borderRadius: '10px',
-    width:'250px',
-    height:'250px',
-    margin: '150px auto 0px auto',
+    width:'350px',
+    height:'350px',
+    margin: '100px auto 0px auto',
     display: 'grid',
     gridTemplate: 'repeat(3, 1fr) / repeat(3, 1fr)'
 }

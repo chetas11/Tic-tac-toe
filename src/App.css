@@ -27,17 +27,17 @@
 .P1{
   margin-top: 3%;
   background: #DCF6E4 0% 0% no-repeat padding-box;
-  height:80px
+  height:auto
 }
 
 .P2{
   background: #F6EFD5 0% 0% no-repeat padding-box;
-  height:80px
+  height:auto
 }
 
 .Games, .Turn{
   background: #EFF3FF 0% 0% no-repeat padding-box;
-  height:80px
+  height:auto
 }
 
 .NextGame{

@@ -4,6 +4,7 @@ import Board from './Board'
 import {usePlayer1, usePlayer2, useGameCount } from './PlayerContext'
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
+import { useHistory } from 'react-router';
 
 
 
@@ -35,22 +36,29 @@ function Game() {
     const Player1 = usePlayer1()
     const Player2 = usePlayer2()
     const GameCount = useGameCount()
+    const history = useHistory()
     
     
 
-    if(winner === "X"){
+    if(winner === "❌"){
         Player1Count++
-    }else if(winner === "O"){
+    }else if(winner === "⭕"){
         Player2Count++
     }
 
+    const backtoHome = () => {
+        history.push("/")
+    }
 
+    const gameSettings = () => {
+        history.push("/gameoptions")
+    }
     
 
     const handleClick = (i) => {
         const boardCopy = [...board]
         if(winner || boardCopy[i]) return;
-        boardCopy[i] = xIsNext ? 'X' : 'O';
+        boardCopy[i] = xIsNext ? '❌' : '⭕';
         setBoard(boardCopy);
         setXIsNext(!xIsNext);
 
@@ -61,6 +69,7 @@ function Game() {
             flag = true;
             setBoard(Array(9).fill(null))
             let startButton = document.getElementById("start")
+            startButton.innerText = "Next Game"
             if(count+1 >= GameCount){
                 count++
                 startButton.hidden  = true
@@ -73,13 +82,30 @@ function Game() {
     const EndGame = () => {
         let FinalWinner = document.getElementById("final")
         let Draw = document.getElementById("draw")
+        let Home = document.getElementById("home")
+        let Settings = document.getElementById("settings")
+        let End = document.getElementById("end")
+        let noOfGames = document.getElementById("noOfGames")
+
+        
         if(Player1Count > Player2Count){
             FinalWinner.innerText = `${Player1}, you have won the Tournament`
         }else if(Player1Count < Player2Count){
             FinalWinner.innerText = `${Player2}, you have won the Tournament`
         }else{
            Draw.classList.remove("hide")  
+           FinalWinner.classList.add("hide")
+           noOfGames.classList.add("hide")
         }
+
+        Player1Count = 0
+        Player2Count = 0
+        count = 0
+        flag = false
+
+        Home.classList.remove("hide")
+        Settings.classList.remove("hide")
+        End.classList.add("hide")
     }
 
     return (
@@ -95,12 +121,12 @@ function Game() {
                     <div className=" sidebar col-lg-5 col-md-5 col-sm-6">
                         <h3>{GameCount} Game Tournament</h3>
                         <h2 className="text-center" style={winner? null : styles.hide}>Congratulation!</h2>
-                        <p id="final" className="text-center" style={winner? null : styles.hide}>{winner==="X" ? Player1  : Player2 }, you won Game {count}</p>
+                        <p id="final" className="text-center" style={winner? null : styles.hide}>{winner==="❌" ? Player1  : Player2 }, you won Game {count}</p>
                         <h1 id="draw" className="text-center hide">Its a Draw !!!</h1>
-                        <p className="text-center" style={winner? styles.hide : null }>Playing Game {count}</p>
+                        <p id="noOfGames" className="text-center" style={winner? styles.hide : null }>Playing Game {count}</p>
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-2">
+                            <div className="col-lg-2 col-md-2 col-sm-6">
                                 <Avatar></Avatar> 
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6">
@@ -145,9 +171,10 @@ function Game() {
                         </div>
                     </div>
                     <hr />
-                        
                         {rendorMoves()}
-                        <button onClick={EndGame} className="end mt-3">End Tournament</button>
+                        <button id="end" onClick={EndGame} className="end mt-3">End Tournament</button>
+                        <button id="home" onClick={backtoHome} className="mt-3 hide NextGame">Home</button>
+                        <button id="settings" onClick={gameSettings} className="end mt-3 hide">Game settings</button>
                     </div>
                 </div> 
             </div>
