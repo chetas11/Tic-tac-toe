@@ -113,31 +113,31 @@ function Game() {
         <div className="container">
         <div className="row">
             <div className="col-lg-2 col-md-2 col-sm-6"></div>
-            <div className="col-lg-8 col-md-8 col-sm-6">
+            <div className="col-lg-8 col-md-8 col-sm-6 col-12">
                 <div className="row top-container">
-                    <div className="col-lg-7 col-md-7 col-sm-6">
+                    <div className="col-lg-7 col-md-7 col-sm-6 col-12 mb-4">
                         { flag ? <Board id="Board" squares={board} onClick={handleClick} /> : null}
                     </div>
-                    <div className=" sidebar col-lg-5 col-md-5 col-sm-6">
-                        <h3>{GameCount} Game Tournament</h3>
-                        <h2 className="text-center" style={winner? null : styles.hide}>Congratulation!</h2>
+                    <div className=" sidebar col-lg-5 col-md-5 col-sm-6 col-12">
+                        <h3 className="mt-3">{GameCount} Game Tournament</h3>
+                        <h3 id="congo" className="text-center" style={winner? null : styles.hide}>Congratulation!</h3>
                         <p id="final" className="text-center" style={winner? null : styles.hide}>{winner==="❌" ? Player1  : Player2 }, you won Game {count}</p>
                         <h1 id="draw" className="text-center hide">Its a Draw !!!</h1>
                         <p id="noOfGames" className="text-center" style={winner? styles.hide : null }>Playing Game {count}</p>
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-6">
+                            <div className="col-lg-2 col-md-2 col-sm-6 col-2">
                                 <Avatar></Avatar> 
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-6">
-                                <div className="col">
+                            <div className="col-lg-6 col-md-6 col-sm-6 col-7">
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-4">
                                     <small>Player 01</small>
                                 </div>
-                                <div className="col">
+                                <div className="col-lg-12 col-md-12 col-sm-12 col-4">
                                     <p>{Player1}</p>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-4 col-sm-6">
+                            <div className="col-lg-4 col-md-4 col-sm-6 col-3">
                                 <div className="col">
                                     <small>Score</small>
                                 </div>
@@ -149,19 +149,19 @@ function Game() {
                     </div>
                     <div className="P2 tab my-3" style={xIsNext ? styles.Inactive : styles.Active }>
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-6">
+                            <div className="col-lg-2 col-md-2 col-sm-6 col-2">
                                 <Avatar></Avatar> 
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-6">
+                            <div className="col-lg-6 col-md-6 col-sm-6 col-7">
                                 <div className="col">
                                     <small>Player 02</small>
                                 </div>
-                                <div className="col text-left">
+                                <div className="col-lg-12 col-md-12 col-sm-12 col text-left">
                                     <p>{Player2}</p>
                                 </div>
                             </div>
-                            <div className="col-lg-4 col-md-4 col-sm-6">
-                                <div className="col">
+                            <div className="col-lg-4 col-md-4 col-sm-6 col-3">
+                                <div className="col-lg-12 col-md-12 col-sm-12 col">
                                     <small>Score</small>
                                 </div>
                                 <div className="col">
