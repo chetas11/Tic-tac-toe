@@ -127,7 +127,7 @@ body{
   opacity: 1;
   height: 300px; 
   top: -130px;
-  left: 193px;
+  left: 153px;
   width: 459px;
   height: 442px;
   position: absolute;
@@ -181,4 +181,23 @@ h1{
 
 .hide{
   display: none;
+}
+
+@media only screen and (max-width: 700px) {
+  .Banner{
+    top: -130px;
+    left: 103px;
+    width: 459px;
+    height: 442px;
+    position: absolute;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .Banner{
+    top: -100px;
+    width: 359px;
+    height: 400px;
+    position: absolute;
+  }
 }
