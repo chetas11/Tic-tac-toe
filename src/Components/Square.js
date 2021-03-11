@@ -9,6 +9,8 @@ const style ={
     outline:'none'
 }
 
+// Tic-Tac-Toe Square
+
 function Square({value, onClick}) {
     return (
         <button style={style} onClick={onClick}>

@@ -6,15 +6,12 @@ import { useHistory } from "react-router-dom";
 
 toast.configure()
 
-
-
-
-function Home() {
+function Home() {                               // Coming soon notification
     function notify() {
     toast.info('Coming Soon...', { position: toast.POSITION.TOP_CENTER, autoClose:1000 })
     }
 
-    const history = useHistory();
+    const history = useHistory();               // usehistory hook to navigate
 
     const StartGame = () => {
         history.push("/gameoptions")

@@ -5,9 +5,11 @@ import Options from './Components/Options'
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 import {PlayerProvider} from './Components/PlayerContext'
 
+//React Routes
+
 function App() {
   return (
-    <PlayerProvider>
+    <PlayerProvider>                     
     <div>
       <Router>
         <Switch>

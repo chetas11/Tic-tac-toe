@@ -1,6 +1,7 @@
 import React from 'react'
 import Square from './Square'
 
+// Tic-Tac-Toe Board
 
 function Board({squares, onClick}) {
     return (

@@ -13,6 +13,8 @@ const styles = {
     marginTop:"10px",
 }
 
+// Game Options 
+
 function Options() {
 
     const history = useHistory();

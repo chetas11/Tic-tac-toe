@@ -13,6 +13,8 @@ let Player2Count = 0
 let count = 0
 let flag = false
 
+// styles
+
 const styles = {
     Active: {
         border: '5px solid #FFA200',
@@ -45,7 +47,7 @@ const styles = {
 
 function Game() {
     const [board, setBoard] = useState(Array(9).fill(null))
-    const [xIsNext, setXIsNext] = useState(true)
+    const [xIsNext, setXIsNext] = useState(true)        
     const winner = calculateWinner(board)
     const Player1 = usePlayer1()
     const Player2 = usePlayer2()
@@ -54,7 +56,7 @@ function Game() {
     
     
 
-    if(winner === "❌"){
+    if(winner === "❌"){                // Incrementing the score after each game
         Player1Count++
     }else if(winner === "⭕"){
         Player2Count++
@@ -69,19 +71,19 @@ function Game() {
     }
     
 
-    const handleClick = (i) => {
+    const handleClick = (i) => {                            // render the X and O
         const boardCopy = [...board]
         if(winner || boardCopy[i]) return;
         boardCopy[i] = xIsNext ? '❌' : '⭕';
         setBoard(boardCopy);
-        setXIsNext(!xIsNext);
+        setXIsNext(!xIsNext);                               // Setting next player
 
     }
 
     const rendorMoves = () => (
         <button id="start" className="NextGame" onClick={()=> {
             flag = true;
-            setBoard(Array(9).fill(null))
+            setBoard(Array(9).fill(null))                               // for next game clearing the square values
             let startButton = document.getElementById("start")
             startButton.innerText = "Next Game"
             if(count+1 >= GameCount){
@@ -93,18 +95,19 @@ function Game() {
         }}><span>Start Game</span></button>
     )
 
+    // End Game function to check who is the final Winner
+
     const EndGame = () => {
         let FinalWinner = document.getElementById("final")
-        let Result = document.getElementById("result")
         let Draw = document.getElementById("draw")
         let Home = document.getElementById("home")
         let Settings = document.getElementById("settings")
         let End = document.getElementById("end")
         let noOfGames = document.getElementById("noOfGames")
         let Congo = document.getElementById("congo")
-
-
         
+        //checking the player count
+
         if(Player1Count > Player2Count){
             FinalWinner.innerText = `${Player1}, you have won the Tournament`
             FinalWinner.style = styles.unhide
@@ -118,10 +121,14 @@ function Game() {
            Draw.classList.remove("hide")
         }
 
+        //Initializing the starting values
+
         Player1Count = 0
         Player2Count = 0
         count = 0
         flag = false
+        
+        //render Home and Settings button
 
         Home.classList.remove("hide")
         Settings.classList.remove("hide")

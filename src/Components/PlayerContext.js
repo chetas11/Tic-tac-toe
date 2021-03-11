@@ -1,5 +1,7 @@
 import React, { useContext, useState } from 'react'
 
+// Context to pass the data 
+
 const Player1Context = React.createContext()
 const Player2Context = React.createContext()
 const Player1UpdateContext = React.createContext()
