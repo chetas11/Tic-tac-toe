@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import { calculateWinner } from '../helper'
 import Board from './Board'
 import {usePlayer1, usePlayer2, useGameCount } from './PlayerContext'
-import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import { useHistory } from 'react-router';
 
@@ -149,7 +148,6 @@ function Game() {
                         <h3 className="mt-3">{GameCount} Game Tournament</h3>
                         <h3 id="congo" className="text-center" style={winner? null : styles.hide}>Congratulation!</h3>
                         <p id="final" className="text-center" style={winner? null : styles.hide}>{winner==="❌" ? Player1  : Player2 }, you won Game {count}</p>
-                        <h1 id="result" className="text-center hide"></h1>
                         <h1 id="draw" className="text-center hide">Its a Draw !!!</h1>
                         <p id="noOfGames" className="text-center" style={winner? styles.hide : null }>Playing Game {count}</p>
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >

@@ -28,7 +28,7 @@ function Home() {                               // Coming soon notification
                         <button onClick={notify} className="btn btn-warning start mt-5 mb-5"><i className="far fa-play-circle"></i><br />PLAY</button>
                         </div>
                         <div className="col-10">
-                            <img className="Banner img-fluid" src={Banner} />
+                            <img className="Banner img-fluid" src={Banner} alt="banner" />
                         </div>
                     </div>
                     <hr />
