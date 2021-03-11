@@ -28,7 +28,7 @@ function Home() {
                 <div className="row text-center top-container">
                     <div className="col-lg-6 col-md-6 col-sm-6">
                         <div className="col-lg-6 col-md-6 col-sm-6 col-2">
-                        <button onClick={notify} className="btn btn-warning start mt-5 mb-5"><i class="far fa-play-circle"></i><br />PLAY</button>
+                        <button onClick={notify} className="btn btn-warning start mt-5 mb-5"><i className="far fa-play-circle"></i><br />PLAY</button>
                         </div>
                         <div className="col-10">
                             <img className="Banner img-fluid" src={Banner} />
@@ -36,12 +36,12 @@ function Home() {
                     </div>
                     <hr />
                     <div className="col-lg-6 col-md-6 col-sm-6 col-6">
-                        <button onClick={notify} className="btn custom my-2 p-3"><span><i class="fas fa-user"></i> Custom Game</span></button><br />
-                        <button onClick={notify} className="btn online my-2 p-3"><span><i class="fas fa-globe"></i> Game Online</span></button>
+                        <button onClick={notify} className="btn custom my-2 p-3"><span><i className="fas fa-user"></i> Custom Game</span></button><br />
+                        <button onClick={notify} className="btn online my-2 p-3"><span><i className="fas fa-globe"></i> Game Online</span></button>
                     </div>
                     <div className="col-lg-6 col-md-6 col-sm-6 col-6">
-                        <button onClick={StartGame} className="btn twop my-2 p-3"><span><i class="fas fa-user-friends"></i> Two Players</span></button><br />
-                        <button onClick={notify} className="btn training my-2 p-3"><span><i class="fas fa-brain"></i> Training Game</span></button>
+                        <button onClick={StartGame} className="btn twop my-2 p-3"><span><i className="fas fa-user-friends"></i> Two Players</span></button><br />
+                        <button onClick={notify} className="btn training my-2 p-3"><span><i className="fas fa-brain"></i> Training Game</span></button>
                     </div>
                 </div>
             </div>

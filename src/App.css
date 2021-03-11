@@ -226,4 +226,9 @@ h1{
   .board{
     margin: 20px auto 0px auto;
   }
+
+.top-container{
+    margin-top: 90px;
+}
+
 }

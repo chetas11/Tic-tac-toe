@@ -15,7 +15,8 @@ let flag = false
 
 const styles = {
     Active: {
-        border: '5px orange solid'
+        border: '5px solid #FFA200',
+        opacity: '1'
     },
     Inactive: {
        border: 'none'
@@ -23,9 +24,22 @@ const styles = {
     hide:{
         display: 'none'
     },
+    unhide:{
+        display: 'block'
+    },
     startBtn:{
         opacity: "0",
         background: 'Black',
+    },
+    Player1:{
+        width:"50px",
+        height:"50px",
+        marginTop:"5px",
+    },
+    Player2:{
+        width:"50px",
+        height:"50px",
+        marginTop:"5px",
     }
 }
 
@@ -81,21 +95,27 @@ function Game() {
 
     const EndGame = () => {
         let FinalWinner = document.getElementById("final")
+        let Result = document.getElementById("result")
         let Draw = document.getElementById("draw")
         let Home = document.getElementById("home")
         let Settings = document.getElementById("settings")
         let End = document.getElementById("end")
         let noOfGames = document.getElementById("noOfGames")
+        let Congo = document.getElementById("congo")
+
 
         
         if(Player1Count > Player2Count){
             FinalWinner.innerText = `${Player1}, you have won the Tournament`
+            FinalWinner.style = styles.unhide
+            Congo.style = styles.unhide
         }else if(Player1Count < Player2Count){
             FinalWinner.innerText = `${Player2}, you have won the Tournament`
-        }else{
-           Draw.classList.remove("hide")  
-           FinalWinner.classList.add("hide")
+            FinalWinner.style = styles.unhide
+            Congo.style = styles.unhide
+        }else{ 
            noOfGames.classList.add("hide")
+           Draw.classList.remove("hide")
         }
 
         Player1Count = 0
@@ -122,18 +142,19 @@ function Game() {
                         <h3 className="mt-3">{GameCount} Game Tournament</h3>
                         <h3 id="congo" className="text-center" style={winner? null : styles.hide}>Congratulation!</h3>
                         <p id="final" className="text-center" style={winner? null : styles.hide}>{winner==="❌" ? Player1  : Player2 }, you won Game {count}</p>
+                        <h1 id="result" className="text-center hide"></h1>
                         <h1 id="draw" className="text-center hide">Its a Draw !!!</h1>
                         <p id="noOfGames" className="text-center" style={winner? styles.hide : null }>Playing Game {count}</p>
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-6 col-2">
-                                <Avatar></Avatar> 
+                                <Avatar style={styles.Player1}></Avatar> 
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 col-7">
-                                <div className="col-lg-12 col-md-12 col-sm-12 col-4">
+                                <div className="col">
                                     <small>Player 01</small>
                                 </div>
-                                <div className="col-lg-12 col-md-12 col-sm-12 col-4">
+                                <div className="col-lg-12 col-md-12 col-sm-12 col">
                                     <p>{Player1}</p>
                                 </div>
                             </div>
@@ -150,7 +171,7 @@ function Game() {
                     <div className="P2 tab my-3" style={xIsNext ? styles.Inactive : styles.Active }>
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-6 col-2">
-                                <Avatar></Avatar> 
+                                <Avatar style={styles.Player2}></Avatar> 
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 col-7">
                                 <div className="col">
