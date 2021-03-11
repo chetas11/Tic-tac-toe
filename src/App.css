@@ -97,7 +97,7 @@ span{
   min-height: 560px;
   position: relative;
   margin-top: 110px;
-  padding: 15px;
+  padding: 25px;
 }
 
 
@@ -147,7 +147,7 @@ span{
   opacity: 1;
   height: 300px; 
   top: -130px;
-  left: 153px;
+  left: 203px;
   width: 459px;
   height: 442px;
   position: absolute;
@@ -212,11 +212,22 @@ span{
   }
 }
 
+@media only screen and (min-width: 700px) {
+  .Banner{
+    top: -130px;
+    left: 153px;
+    width: 459px;
+    height: 442px;
+    position: absolute;
+  }
+}
+
 
 @media only screen and (max-width: 520px) {
   .Banner{
     top: -100px;
     width: 359px;
+    left: 160px;
     height: 400px;
     position: absolute;
   }

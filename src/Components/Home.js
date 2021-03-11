@@ -20,15 +20,15 @@ function Home() {                               // Coming soon notification
     return (
         <div className="container">
         <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-6"></div>
-            <div className="col-lg-4 col-md-12 col-sm-12">
+            <div className="col-lg-3 col-md-2 col-sm-1"></div>
+            <div className="col-lg-6  col-md-8 col-sm-10">
                 <div className="row text-center top-container">
                     <div className="col-lg-6 col-md-6 col-sm-6">
                         <div className="col-lg-6 col-md-6 col-sm-6 col-2">
                         <button onClick={notify} className="btn btn-warning start mt-5 mb-5"><i className="far fa-play-circle"></i><br />PLAY</button>
-                        </div>
-                        <div className="col-10">
+                        <div className="col-10 col-lg-6">
                             <img className="Banner img-fluid" src={Banner} alt="banner" />
+                        </div>
                         </div>
                     </div>
                     <hr />
@@ -42,7 +42,7 @@ function Home() {                               // Coming soon notification
                     </div>
                 </div>
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6"></div>
+            <div className="col-lg-3 col-md-2 col-sm-1"></div>
         </div>
         </div>
     )

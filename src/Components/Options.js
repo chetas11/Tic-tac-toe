@@ -29,15 +29,15 @@ function Options() {
     return (
         <div className="container">
         <div className="row">
-            <div className="col-lg-4 col-md-4 col-sm-6"></div>
-            <div className="col-lg-4 col-md-4 col-sm-6">
+            <div className="col-lg-4 col-md-2 col-sm-1"></div>
+            <div className="col-lg-4 col-md-8 col-sm-10">
                 <div className="row top-container">
                     <div className="P1 tab mb-3 pb-1">
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                                 <Avatar style={styles}></Avatar> 
                             </div>
-                            <div className="col-lg-10 col-md-10 col-sm-4 col-7">
+                            <div className="col-lg-10 col-md-10 col-sm-10 col-7">
                                 <div className="col">
                                     <p>Player 01</p>
                                 </div>
@@ -52,7 +52,7 @@ function Options() {
                             <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                                 <Avatar style={styles}></Avatar> 
                             </div>
-                            <div className="col-lg-10 col-md-10 col-sm-4 col-7">
+                            <div className="col-lg-10 col-md-10 col-sm-10 col-7">
                                 <div className="col">
                                     <p>Player 02</p>
                                 </div>
@@ -67,7 +67,7 @@ function Options() {
                             <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                                 <Avatar style={styles}><i class="fas fa-trophy"></i></Avatar> 
                             </div>
-                            <div className="col-lg-10 col-md-10 col-sm-4 col-7">
+                            <div className="col-lg-10 col-md-10 col-sm-10 col-7">
                                 <div className="col">
                                     <p>Number of games</p>
                                 </div>
@@ -82,7 +82,7 @@ function Options() {
                             <div className="col-lg-2 col-md-2 col-sm-2 col-2">
                                 <Avatar style={styles} ><i class="fas fa-running"></i></Avatar> 
                             </div>
-                            <div className="col-lg-10 col-md-10 col-sm-4 col-7">
+                            <div className="col-lg-10 col-md-10 col-sm-10 col-7">
                                 <div className="col">
                                     <p>Who starts</p>
                                 </div>
@@ -96,7 +96,7 @@ function Options() {
                     <button onClick={handleClick} className="startgame"><span>Start Game</span></button>
                 </div> 
             </div>
-            <div className="col-lg-4 col-md-4 col-sm-6"></div>
+            <div className="col-lg-4 col-md-2 col-sm-1"></div>
         </div>
         </div>
     )

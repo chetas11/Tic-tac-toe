@@ -138,13 +138,13 @@ function Game() {
         <>
         <div className="container">
         <div className="row">
-            <div className="col-lg-2 col-md-2 col-sm-6"></div>
-            <div className="col-lg-8 col-md-8 col-sm-6 col-12">
+            <div className="col-lg-2 col-md-1 col-sm-1"></div>
+            <div className="col-lg-8 col-md-10 col-sm-10 col-12">
                 <div className="row top-container">
-                    <div className="col-lg-7 col-md-7 col-sm-6 col-12 mb-4">
+                    <div className="col-lg-7 col-md-12 col-sm-6 col-12 mb-4">
                         { flag ? <Board id="Board" squares={board} onClick={handleClick} /> : null}
                     </div>
-                    <div className=" sidebar col-lg-5 col-md-5 col-sm-6 col-12">
+                    <div className=" sidebar col-lg-5 col-md-12 col-sm-6 col-12">
                         <h3 className="mt-3">{GameCount} Game Tournament</h3>
                         <h3 id="congo" className="text-center" style={winner? null : styles.hide}>Congratulation!</h3>
                         <p id="final" className="text-center" style={winner? null : styles.hide}>{winner==="❌" ? Player1  : Player2 }, you won Game {count}</p>
@@ -204,7 +204,7 @@ function Game() {
                     </div>
                 </div> 
             </div>
-            <div className="col-lg-2 col-md-2 col-sm-6"></div>
+            <div className="col-lg-2 col-md-1 col-sm-1"></div>
         </div>
         </div>
         </>
