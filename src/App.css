@@ -227,6 +227,7 @@ span{
   .Banner{
     top: -100px;
     width: 359px;
+    left: 130px;
     height: 400px;
     position: absolute;
   }
