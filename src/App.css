@@ -231,10 +231,10 @@ span{
 
 @media only screen and (max-width: 520px) {
   .Banner{
-    top: -100px;
-    width: 359px;
-    left: 130px;
-    height: 400px;
+    top: -80px;
+    width: 329px;
+    left: 115px;
+    height: 350px;
     position: absolute;
   }
 
@@ -248,7 +248,7 @@ span{
 
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 414px) {
   .board{
     border: 4px solid #6e7c7c;
     border-radius: 10px;
