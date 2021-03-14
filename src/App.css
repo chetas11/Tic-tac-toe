@@ -173,6 +173,12 @@ span{
     grid-template: repeat(3, 1fr) / repeat(3, 1fr)
 }
 
+.player{
+  width:50px;
+  height:50px;
+  margin-top: 5px;
+}
+
 
 .online{
   background: #4B4BFF 0% 0% no-repeat padding-box;
@@ -240,4 +246,59 @@ span{
     margin-top: 90px;
 }
 
+}
+
+@media only screen and (max-width: 420px) {
+  .board{
+    border: 4px solid #6e7c7c;
+    border-radius: 10px;
+    width:280px;
+    height:280px;
+    margin: 100px auto 0px auto;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr)
+  }
+
+  .custom{
+   width: 100%;
+    height: 70px;
+    font-size: 0.67rem
+  }
+    
+  .online{
+  width: 100%;
+  height: 70px;
+  font-size: 0.67rem
+  }
+
+  .twop{
+    width: 100%;
+    height: 70px;
+    font-size: 0.67rem
+  }
+
+  .training{
+    width: 100%;
+    height: 70px;
+    font-size: 0.67rem
+  }
+
+  .Banner{
+    opacity: 1;
+    top: -50px;
+    left: 203px;
+    width: 269px;
+    height: 282px;
+    position: absolute;
+    left: 123px;
+}
+
+.start{
+  border-radius: 20px;
+  opacity: 1;
+  width: 200%;
+  color: #424242;
+}
+
+  
 }

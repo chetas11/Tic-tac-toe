@@ -32,11 +32,7 @@ const styles = {
         opacity: "0",
         background: 'Black',
     },
-    Player1:{
-        width:"50px",
-        height:"50px",
-        marginTop:"5px",
-    },
+    
     Player2:{
         width:"50px",
         height:"50px",
@@ -153,7 +149,7 @@ function Game() {
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-6 col-2">
-                                <Avatar style={styles.Player1}></Avatar> 
+                                <Avatar className="player"></Avatar> 
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 col-7">
                                 <div className="col">
@@ -176,7 +172,7 @@ function Game() {
                     <div className="P2 tab my-3" style={xIsNext ? styles.Inactive : styles.Active }>
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-6 col-2">
-                                <Avatar style={styles.Player2}></Avatar> 
+                                <Avatar className="player"></Avatar> 
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-6 col-7">
                                 <div className="col">
