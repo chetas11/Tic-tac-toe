@@ -302,3 +302,25 @@ span{
 
   
 }
+
+
+@media only screen and (max-width: 365px) {
+  .board{
+    width:200px;
+    height:200px;
+  }
+
+
+.Banner{
+    display: none;
+  }
+
+.start{
+  width: 102px;
+  height: 102px;
+  color: #424242;
+  margin-left: 165%;
+}
+
+
+}

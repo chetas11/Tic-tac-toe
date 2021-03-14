@@ -3,11 +3,6 @@ import { useHistory } from "react-router-dom";
 import Avatar from '@material-ui/core/Avatar';
 import {usePlayer1, usePlayer2, useUpdatePlayer1, useUpdatePlayer2, useGameCount, useUpdateGameCount} from './PlayerContext'
 
-const styles = {
-    width:"50px",
-    height:"50px",
-    marginTop:"10px",
-}
 
 // Game Options 
 
@@ -35,7 +30,7 @@ function Options() {
                     <div className="P1 tab mb-3 pb-1">
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                                <Avatar style={styles}></Avatar> 
+                                <Avatar className="player"></Avatar> 
                             </div>
                             <div className="col-lg-10 col-md-10 col-sm-10 col-7">
                                 <div className="col">
@@ -50,7 +45,7 @@ function Options() {
                     <div className="P2 tab mb-3 pb-1">
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                                <Avatar style={styles}></Avatar> 
+                                <Avatar  className="player"></Avatar> 
                             </div>
                             <div className="col-lg-10 col-md-10 col-sm-10 col-7">
                                 <div className="col">
@@ -65,7 +60,7 @@ function Options() {
                     <div className="Games tab mb-3 pb-1"> 
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                                <Avatar style={styles}><i class="fas fa-trophy"></i></Avatar> 
+                                <Avatar className="player"><i class="fas fa-trophy"></i></Avatar> 
                             </div>
                             <div className="col-lg-10 col-md-10 col-sm-10 col-7">
                                 <div className="col">
@@ -80,7 +75,7 @@ function Options() {
                     <div className="Turn tab mb-3 pb-1">
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                                <Avatar style={styles} ><i class="fas fa-running"></i></Avatar> 
+                                <Avatar  className="player" ><i class="fas fa-running"></i></Avatar> 
                             </div>
                             <div className="col-lg-10 col-md-10 col-sm-10 col-7">
                                 <div className="col">
