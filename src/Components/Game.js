@@ -16,7 +16,7 @@ let flag = false
 
 const styles = {
     Active: {
-        border: '5px solid #FFA200',
+        border: '8px solid #FFA200',
         opacity: '1'
     },
     Inactive: {
@@ -148,10 +148,10 @@ function Game() {
                         <p id="noOfGames" className="text-center" style={winner? styles.hide : null }>Playing Game {count}</p>
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-6 col-2">
-                                <Avatar className="player"></Avatar> 
+                            <div className="col-lg-3 col-md-2 col-sm-6 col-3">
+                                <Avatar className="player p1"><i class="fas fa-user"></i></Avatar> 
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-6 col-7">
+                            <div className="col-lg-5 col-md-6 col-sm-6 col-6">
                                 <div className="col">
                                     <small>Player 01</small>
                                 </div>
@@ -171,10 +171,10 @@ function Game() {
                     </div>
                     <div className="P2 tab my-3" style={xIsNext ? styles.Inactive : styles.Active }>
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-6 col-2">
-                                <Avatar className="player"></Avatar> 
+                            <div className="col-lg-3 col-md-2 col-sm-6 col-3">
+                                <Avatar className="player p2"><i class="fas fa-user"></i></Avatar> 
                             </div>
-                            <div className="col-lg-6 col-md-6 col-sm-6 col-7">
+                            <div className="col-lg-5 col-md-6 col-sm-6 col-6">
                                 <div className="col">
                                     <small>Player 02</small>
                                 </div>
