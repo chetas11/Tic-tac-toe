@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from "react-router-dom";
 import Avatar from '@material-ui/core/Avatar';
 import {usePlayer1, usePlayer2, useUpdatePlayer1, useUpdatePlayer2, useGameCount, useUpdateGameCount} from './PlayerContext'
-import PlayerImage1 from '../images/avatar01.png'
+import PlayerImage1 from '../images/player1.png'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -82,15 +82,15 @@ function Options() {
             </div>
             </div>
         <div className="row">
-            <div className="col-lg-4 col-md-2 col-sm-1"></div>
-            <div className="col-lg-4 col-md-8 col-sm-10">
+            <div className="col-xl-4 col-lg-2 col-md-2 col-sm-1"></div>
+            <div className="col-xl-4 col-lg-8 col-md-8 col-sm-10">
                 <div className="row top-container">
                     <div className="P1 tab mb-3 pb-1">
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-2 col-3">
-                                <Avatar className="player p1"><i className="fas fa-user"></i></Avatar> 
+                            <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+                                <Avatar src={PlayerImage1} className="player p1"><i className="fas fa-user"></i></Avatar> 
                             </div>
-                            <div className="col-lg-10 col-md-10 col-sm-10 col-6">
+                            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-6">
                                 <div className="col">
                                     <p>Player 01</p>
                                 </div>
@@ -102,10 +102,10 @@ function Options() {
                     </div>
                     <div className="P2 tab mb-3 pb-1">
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-2 col-3">
+                            <div className="col-xl-2 col-lg-2  col-md-2 col-sm-2 col-3">
                                 <Avatar  className="player p2"><i className="fas fa-user"></i></Avatar> 
                             </div>
-                            <div className="col-lg-10 col-md-10 col-sm-10 col-6">
+                            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-6">
                                 <div className="col">
                                     <p>Player 02</p>
                                 </div>
@@ -117,10 +117,10 @@ function Options() {
                     </div>
                     <div className="Games tab mb-3 pb-1" data-toggle="modal" data-target="#exampleModalCenter"> 
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-2 col-3">
-                                <Avatar className="player games"><i className="fas fa-trophy"></i></Avatar> 
+                            <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
+                                <Avatar className="player games mt-2"><i className="fas fa-trophy"></i></Avatar> 
                             </div>
-                            <div className="col-lg-10 col-md-10 col-sm-10 col-6">
+                            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-9">
                                 <div className="col">
                                     <p>Number of games</p>
                                 </div>
@@ -133,10 +133,10 @@ function Options() {
                     </div>
                     <div className="Turn tab mb-3 pb-1">
                         <div className="row">
-                            <div className="col-lg-2 col-md-2 col-sm-2 col-3">
+                            <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
                                 <Avatar  className="player games" ><i className="fas fa-running"></i></Avatar> 
                             </div>
-                            <div className="col-lg-10 col-md-10 col-sm-10 col-6">
+                            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-6">
                                 <div className="col">
                                     <p>Who starts</p>
                                 </div>
@@ -150,7 +150,7 @@ function Options() {
                     <button onClick={handleClick} className="startgame"><span>Start Game</span></button>
                 </div> 
             </div>
-            <div className="col-lg-4 col-md-2 col-sm-1"></div>
+            <div className="col-xl-4 col-lg-2 col-md-2 col-sm-1"></div>
         </div>
         </div>
     )
