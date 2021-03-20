@@ -115,7 +115,7 @@ function Options() {
                             </div>
                         </div>
                     </div>
-                    <div className="Games tab mb-3 pb-1 gameNumber" data-toggle="modal" data-target="#exampleModalCenter"> 
+                    <div className="Games tab mb-3 pb-1" data-toggle="modal" data-target="#exampleModalCenter"> 
                         <div className="row">
                             <div className="col-lg-2 col-md-2 col-sm-2 col-3">
                                 <Avatar className="player games"><i className="fas fa-trophy"></i></Avatar> 
@@ -125,8 +125,8 @@ function Options() {
                                     <p>Number of games</p>
                                 </div>
                                 <div className="col">
-                                    {/* <input onChange={(e) => GameCountupdate(e.target.value)} value={GameCount} className='form-control input mt-1'></input> */}
-                                    {GameCount} Games
+                                    {GameCount} Games <br />
+                                    <small>Click to select the number of games</small>
                                 </div>
                             </div>
                         </div>
