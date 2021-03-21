@@ -1,12 +1,17 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
-import Avatar from '@material-ui/core/Avatar';
 import {usePlayer1, usePlayer2, useUpdatePlayer1, useUpdatePlayer2, useGameCount, useUpdateGameCount} from './PlayerContext'
 import PlayerImage1 from '../images/player1.png'
+import PlayerImage2 from '../images/player2.png'
+import Winner from '../images/winner.png'
+import Run from '../images/run.png'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-toast.configure()
+
+toast.configure()  
+
+
 
 // Game Options 
 
@@ -87,10 +92,10 @@ function Options() {
                 <div className="row top-container">
                     <div className="P1 tab mb-3 pb-1">
                         <div className="row">
-                            <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
-                                <Avatar src={PlayerImage1} className="player p1"><i className="fas fa-user"></i></Avatar> 
+                            <div className="col-xl-3 col-lg-2 col-md-2 col-sm-2 col-3">
+                                <img className="player p1-img" src={PlayerImage1} alt="..." />
                             </div>
-                            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-6">
+                            <div className="col-xl-9 col-lg-10 col-md-10 col-sm-10 col-9">
                                 <div className="col">
                                     <p>Player 01</p>
                                 </div>
@@ -102,10 +107,10 @@ function Options() {
                     </div>
                     <div className="P2 tab mb-3 pb-1">
                         <div className="row">
-                            <div className="col-xl-2 col-lg-2  col-md-2 col-sm-2 col-3">
-                                <Avatar  className="player p2"><i className="fas fa-user"></i></Avatar> 
+                            <div className="col-xl-3 col-lg-2  col-md-2 col-sm-2 col-3">
+                                <img className="player p2-img" src={PlayerImage2} alt="..." />
                             </div>
-                            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-6">
+                            <div className="col-xl-9 col-lg-10 col-md-10 col-sm-10 col-6">
                                 <div className="col">
                                     <p>Player 02</p>
                                 </div>
@@ -117,10 +122,10 @@ function Options() {
                     </div>
                     <div className="Games tab mb-3 pb-1" data-toggle="modal" data-target="#exampleModalCenter"> 
                         <div className="row">
-                            <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
-                                <Avatar className="player games mt-2"><i className="fas fa-trophy"></i></Avatar> 
+                            <div className="col-xl-3 col-lg-2 col-md-2 col-sm-2 col-3">
+                                <img className="winner" src={Winner} alt="..." />
                             </div>
-                            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-9">
+                            <div className="col-xl-9 col-lg-10 col-md-10 col-sm-10 col-9">
                                 <div className="col">
                                     <p>Number of games</p>
                                 </div>
@@ -133,10 +138,10 @@ function Options() {
                     </div>
                     <div className="Turn tab mb-3 pb-1">
                         <div className="row">
-                            <div className="col-xl-2 col-lg-2 col-md-2 col-sm-2 col-3">
-                                <Avatar  className="player games" ><i className="fas fa-running"></i></Avatar> 
+                            <div className="col-xl-3 col-lg-2 col-md-2 col-sm-2 col-3">
+                                <img className="winner" src={Run} alt="..." />
                             </div>
-                            <div className="col-xl-10 col-lg-10 col-md-10 col-sm-10 col-6">
+                            <div className="col-xl-9 col-lg-10 col-md-10 col-sm-10 col-6">
                                 <div className="col">
                                     <p>Who starts</p>
                                 </div>

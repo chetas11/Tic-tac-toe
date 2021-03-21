@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import { calculateWinner } from '../helper'
 import Board from './Board'
 import {usePlayer1, usePlayer2, useGameCount } from './PlayerContext'
-import Avatar from '@material-ui/core/Avatar';
 import { useHistory } from 'react-router';
-
+import PlayerImage1 from '../images/player1.png'
+import PlayerImage2 from '../images/player2.png'
 
 
 let Player1Count = 0
@@ -16,7 +16,7 @@ let flag = false
 
 const styles = {
     Active: {
-        border: '8px solid #FFA200',
+        border: '5px solid #FFA200',
         opacity: '1'
     },
     Inactive: {
@@ -149,7 +149,7 @@ function Game() {
                         <div className="P1 tab my-3" style={xIsNext ? styles.Active : styles.Inactive } >
                         <div className="row">
                             <div className="col-lg-3 col-md-2 col-sm-6 col-3">
-                                <Avatar className="player p1"><i class="fas fa-user"></i></Avatar> 
+                                <img className="player p1-img" src={PlayerImage1} alt="..." />
                             </div>
                             <div className="col-lg-5 col-md-6 col-sm-6 col-6">
                                 <div className="col">
@@ -172,7 +172,7 @@ function Game() {
                     <div className="P2 tab my-3" style={xIsNext ? styles.Inactive : styles.Active }>
                         <div className="row">
                             <div className="col-lg-3 col-md-2 col-sm-6 col-3">
-                                <Avatar className="player p2"><i class="fas fa-user"></i></Avatar> 
+                                <img className="player p2-img" src={PlayerImage2} alt="..." />
                             </div>
                             <div className="col-lg-5 col-md-6 col-sm-6 col-6">
                                 <div className="col">
